@@ -145,6 +145,7 @@ nav{
 }
 
 .btn{
+  display: inline-block;
   background-color: #0061FF;
   color: white;
   padding: 10px 15px;
@@ -327,20 +328,20 @@ ul li i{
   font-weight: bolder;
 }
 
-.row{
+.roww{
   margin-top: 50px;
   height: 260px;
   border: solid 1px lightgray;
 }
 
-.row .interno p{
+.roww .interno p{
   padding-top: 40px;
 }
 
-.row .interno h2{
+.roww .interno h2{
   display: inline-block;
 }
-.row .interno .btn{
+.roww .interno .btn{
   float: right;
   
   
@@ -426,15 +427,26 @@ ul li i{
 .loghi .logo{
   width: calc(100% / 3);
   height: 100%;
+  display: flex;
+  flex-flow: wrap;
   
-}.loghi .logo .square{
+}
+
+.loghi .logo .square{
   width: calc(100% / 2);
   height: calc(100% / 2);
-  float: left;
+ 
+ 
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.loghi .logo .square:hover, .active{
+  border: solid 10px rgba(255, 255, 255, 0.4);
+
+}
+
 .logo .square img{
   width: 50%;
   height: auto;
@@ -496,9 +508,198 @@ ul li i{
   margin-top: 200px;
  }
 
- .ask .container h1{
-  margin-bottom: 50px;
- }
+ .accordion .menu {
+  margin: 2px;
+  padding: 0;
+  
+  overflow: hidden;
+  background-color: white;
+}
+.accordion{
+  position: relative;
+  top: 60px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  width: 100%;
+  margin: auto;
+  
+}
+.accordion:hover{
+  background-color: rgb(219, 213, 213);
+}
+.accordion .menu p{
+  padding: 0px 10px;
+}
+.accordion h4{
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+
+
+.accordion .menu {
+  clear: both;
+  max-height: 0px;
+  transition: max-height .2s ease-out;
+}
+
+.accordion .menu-icon {
+  padding: 40px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.accordion .menu-icon .nav-icon {
+  background-color: gray;
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: relative;
+  transition: background-color .1s ease-out;
+}
+
+.accordion .menu-icon .nav-icon::before,
+.accordion .menu-icon .nav-icon::after {
+  background-color: grey;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all .3s ease-out;
+  position: absolute;
+}
+
+.accordion .menu-icon .nav-icon::before {
+  top: 5px
+}
+
+.accordion .menu-icon .nav-icon::after {
+  top: -5px
+}
+
+.accordion .menu-btn {
+  display: none
+}
+
+.accordion .menu-btn:checked~.menu {
+  max-height: 240px;
+  box-shadow: 0 0 20px black;
+}
+
+.accordion .menu-btn:checked~.menu-icon .nav-icon {
+  background-color: transparent;
+}
+
+.accordion .menu-btn:checked~.menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.accordion .menu-btn:checked~.menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+
+/* ----------- */
+
+
+.accordions .menus {
+  margin: 2px;
+  padding: 0;
+  
+  overflow: hidden;
+  background-color: white;
+}
+.accordions{
+  position: relative;
+  top: 60px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  width: 100%;
+  margin: auto;
+  
+}
+.accordions:hover{
+  background-color: rgb(219, 213, 213);
+}
+.accordions .menus p{
+  padding: 0px 10px;
+}
+.accordions h4{
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+
+
+.accordions .menus {
+  clear: both;
+  max-height: 0px;
+  transition: max-height .2s ease-out;
+}
+
+.accordions .menu-icons {
+  padding: 40px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.accordions .menu-icons .nav-icons {
+  background-color: gray;
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: relative;
+  transition: background-color .1s ease-out;
+}
+
+.accordions .menu-icons .nav-icons::before,
+.accordions .menu-icons .nav-icons::after {
+  background-color: grey;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all .3s ease-out;
+  position: absolute;
+}
+
+.accordions .menu-icons .nav-icons::before {
+  top: 5px
+}
+
+.accordions .menu-icons .nav-icons::after {
+  top: -5px
+}
+
+.accordions .menu-btns {
+  display: none
+}
+
+.accordions .menu-btns:checked~.menus {
+  max-height: 240px;
+  box-shadow: 0 0 20px black;
+}
+
+.accordions .menu-btns:checked~.menu-icons .nav-icons {
+  background-color: transparent;
+}
+
+.accordions .menu-btns:checked~.menu-icons .nav-icons::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.accordions .menu-btns:checked~.menu-icons .nav-icons::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+ 
+
 
 
  
